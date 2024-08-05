@@ -1,0 +1,291 @@
+[gd_scene load_steps=15 format=3 uid="uid://dgsqi0qc3rreg"]
+
+[ext_resource type="Script" path="res://inspector/inspector.gd" id="1_6euip"]
+[ext_resource type="StyleBox" uid="uid://balvty7xra31d" path="res://inspector/styleBoxLayer.tres" id="1_6rjvv"]
+[ext_resource type="Texture2D" uid="uid://cepydoro44ipu" path="res://menu/sprites/arrUP.png" id="2_wl2lt"]
+[ext_resource type="Texture2D" uid="uid://b2ncjv3flmie4" path="res://menu/sprites/arrDOWN.png" id="3_jmggv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbj0v"]
+bg_color = Color(0.286275, 0.286275, 0.286275, 1)
+border_width_left = 5
+border_width_right = 5
+border_color = Color(0.286275, 0.286275, 0.286275, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmdxh"]
+bg_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.776471, 0.392157, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0axxg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_be5yo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8eveq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6b2ga"]
+bg_color = Color(0.286275, 0.286275, 0.286275, 1)
+border_width_left = 5
+border_width_right = 5
+border_color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xnjip"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qttbv"]
+bg_color = Color(0.286275, 0.286275, 0.286275, 1)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+border_color = Color(0.286275, 0.286275, 0.286275, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mcjie"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3bopk"]
+
+[node name="Control" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 450)
+layout_mode = 3
+anchor_right = 0.117
+anchor_bottom = 0.65
+offset_right = 0.23999
+offset_bottom = -3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_6euip")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 0.041
+offset_top = 5.0
+offset_bottom = 14.7
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("1_6rjvv")
+text = "TOOLS"
+horizontal_alignment = 1
+
+[node name="Center1" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 38.0
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="GridContainer" type="GridContainer" parent="Center1"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 3
+
+[node name="Btn_brush" type="Button" parent="Center1/GridContainer"]
+layout_mode = 2
+tooltip_text = "Draw Mode"
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wbj0v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gmdxh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0axxg")
+toggle_mode = true
+button_pressed = true
+text = "Brush"
+
+[node name="Btn_select" type="Button" parent="Center1/GridContainer"]
+layout_mode = 2
+tooltip_text = "Selection Mode"
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wbj0v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gmdxh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0axxg")
+toggle_mode = true
+text = "Select"
+
+[node name="Btn_test1" type="Button" parent="Center1/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wbj0v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gmdxh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0axxg")
+toggle_mode = true
+text = "test1"
+
+[node name="Btn_test2" type="Button" parent="Center1/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wbj0v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gmdxh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0axxg")
+toggle_mode = true
+text = "test2"
+
+[node name="Btn_test3" type="Button" parent="Center1/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wbj0v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gmdxh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0axxg")
+toggle_mode = true
+text = "test3"
+
+[node name="Btn_test4" type="Button" parent="Center1/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wbj0v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gmdxh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0axxg")
+toggle_mode = true
+text = "test4"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.041
+offset_top = 84.0
+offset_right = 1.0
+offset_bottom = 93.7
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("1_6rjvv")
+text = "LAYER SELECT"
+horizontal_alignment = 1
+
+[node name="Center2" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 93.0
+offset_bottom = 135.0
+grow_horizontal = 2
+
+[node name="Control" type="Control" parent="Center2"]
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="Center2/Control"]
+layout_mode = 0
+offset_left = -73.0
+offset_top = 2.0
+offset_right = 23.0
+offset_bottom = 94.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_be5yo")
+select_mode = 1
+item_count = 3
+item_0/text = "     layer 0"
+item_1/text = "     layer 1"
+item_2/text = "     layer 2"
+
+[node name="btn_UP" type="Button" parent="Center2/Control"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 2.0
+offset_right = 71.0
+offset_bottom = 22.0
+tooltip_text = "move Layer UP"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8eveq")
+icon = ExtResource("2_wl2lt")
+icon_alignment = 1
+expand_icon = true
+
+[node name="btn_DN" type="Button" parent="Center2/Control"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 25.0
+offset_right = 71.0
+offset_bottom = 45.0
+tooltip_text = "move layer DOWN"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8eveq")
+icon = ExtResource("3_jmggv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Btn_add_Layer" type="Button" parent="Center2/Control"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 48.0
+offset_right = 71.0
+offset_bottom = 68.0
+tooltip_text = "Add new layer"
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_6b2ga")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xnjip")
+text = "+"
+
+[node name="Btn_del_Layer" type="Button" parent="Center2/Control"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 71.0
+offset_right = 71.0
+offset_bottom = 91.0
+tooltip_text = "delete layer"
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_6b2ga")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xnjip")
+text = "-"
+
+[node name="GridContainer" type="GridContainer" parent="Center2/Control"]
+layout_mode = 0
+offset_left = -69.0
+offset_top = 98.0
+offset_right = 30.0
+offset_bottom = 142.0
+columns = 3
+
+[node name="Btn_mer_layer" type="Button" parent="Center2/Control/GridContainer"]
+layout_mode = 2
+tooltip_text = "Merge layers
+( layers selected need to be more than 1 )"
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_qttbv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mcjie")
+text = "Merge"
+
+[node name="Btn_nam_layer" type="Button" parent="Center2/Control/GridContainer"]
+layout_mode = 2
+tooltip_text = "Rename layer"
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_qttbv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mcjie")
+text = "Rename"
+
+[node name="debug" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -202.0
+offset_bottom = -171.0
+grow_horizontal = 2
+grow_vertical = 0
+tooltip_text = "Press to show extra INFO"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3bopk")
+text = "Debug"
+
+[node name="debug_txt" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 285.0
+offset_right = 115.0
+offset_bottom = 308.0
+text = "ldnflksdjlkfjdsl"

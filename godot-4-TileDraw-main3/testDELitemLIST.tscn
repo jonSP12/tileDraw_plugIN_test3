@@ -1,0 +1,127 @@
+[gd_scene load_steps=5 format=3 uid="uid://o2hbxov5g12n"]
+
+[ext_resource type="Texture2D" uid="uid://cgl6efwplftrn" path="res://menu/sprites/move01.png" id="1_lougg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdpuj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oleiw"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aovmm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ScrollContainer3" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(200, 80)
+offset_left = 342.0
+offset_top = 239.0
+offset_right = 382.0
+offset_bottom = 279.0
+size_flags_horizontal = 4
+
+[node name="HSplitContainer" type="HSplitContainer" parent="ScrollContainer3"]
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+dragger_visibility = 1
+
+[node name="ItemList" type="ItemList" parent="ScrollContainer3/HSplitContainer"]
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 2
+select_mode = 1
+item_count = 5
+item_0/text = "111"
+item_1/text = "222"
+item_2/text = "333"
+item_3/text = "444"
+item_4/text = "555"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer3/HSplitContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer3/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+text = "rename"
+
+[node name="Button3" type="Button" parent="ScrollContainer3/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("1_lougg")
+
+[node name="HSeparator" type="HSeparator" parent="."]
+offset_left = 169.0
+offset_top = 239.0
+offset_right = 311.0
+offset_bottom = 308.0
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xdpuj")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 75.0
+offset_top = 77.0
+offset_right = 191.0
+offset_bottom = 143.0
+columns = 3
+
+[node name="Button5" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_oleiw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aovmm")
+text = "111
+"
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "111
+"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "222
+"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "111
+"
+
+[node name="Button4" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "111
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+modulate = Color(0, 0, 0, 0.00392157)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(100, 90)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 148.0
+offset_top = 109.0
+offset_right = 372.0
+offset_bottom = 267.0
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="Control"]
+title = "Layer Name"
+initial_position = 1
+size = Vector2i(200, 107)
+visible = true
+
+[node name="TextEdit" type="TextEdit" parent="Control/ConfirmationDialog"]
+custom_minimum_size = Vector2(100, 50)
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 58.0
+text = "type stuff"
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

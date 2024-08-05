@@ -1,0 +1,191 @@
+[gd_scene load_steps=22 format=3 uid="uid://vaani43bpsnl"]
+
+[ext_resource type="Texture2D" uid="uid://cgl6efwplftrn" path="res://menu/sprites/move01.png" id="1_bebt8"]
+[ext_resource type="Script" path="res://menu/Label.gd" id="1_lbdxw"]
+[ext_resource type="Script" path="res://menu/menu.gd" id="1_mwai6"]
+[ext_resource type="Script" path="res://menu/portContainer.gd" id="1_v0is7"]
+[ext_resource type="Texture2D" uid="uid://ued7pxnqnlmf" path="res://images/barbTL01.png" id="1_xcfvg"]
+[ext_resource type="Script" path="res://menu/BtnMove1.gd" id="2_5c2vf"]
+[ext_resource type="Script" path="res://menu/menuArea.gd" id="3_8wafo"]
+[ext_resource type="Script" path="res://menu/expBtn.gd" id="4_10gml"]
+[ext_resource type="Texture2D" uid="uid://cepydoro44ipu" path="res://menu/sprites/arrUP.png" id="4_t6uev"]
+[ext_resource type="Script" path="res://menu/BtnExpU.gd" id="5_vqag0"]
+[ext_resource type="Texture2D" uid="uid://b2ncjv3flmie4" path="res://menu/sprites/arrDOWN.png" id="6_h6jbu"]
+[ext_resource type="Texture2D" uid="uid://dxepu6dh1vu4g" path="res://menu/sprites/arrLEFT.png" id="7_awbac"]
+[ext_resource type="Script" path="res://menu/BtnExpD.gd" id="7_m3sex"]
+[ext_resource type="Texture2D" uid="uid://b2sdma37j5xvo" path="res://menu/sprites/arrRIGHT.png" id="8_l8yys"]
+[ext_resource type="Script" path="res://menu/BtnExpL.gd" id="9_xn6o6"]
+[ext_resource type="Texture2D" uid="uid://qsl5scy4m1fg" path="res://menu/sprites/arrMIDDLE.png" id="9_xvjec"]
+[ext_resource type="Script" path="res://menu/BtnExpR.gd" id="11_m82xa"]
+[ext_resource type="Script" path="res://menu/BtnExpM.gd" id="13_78y30"]
+[ext_resource type="Script" path="res://menu/image.gd" id="17_38que"]
+[ext_resource type="Script" path="res://menu/draw.gd" id="20_ojfd1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emyim"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1280.0
+offset_bottom = -720.0
+script = ExtResource("1_mwai6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1271.0
+offset_bottom = 138.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_emyim")
+script = ExtResource("1_lbdxw")
+
+[node name="menuArea" type="PanelContainer" parent="."]
+layout_mode = 0
+mouse_filter = 1
+script = ExtResource("3_8wafo")
+
+[node name="BtnMove1" type="TextureButton" parent="."]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 403.0
+offset_top = 128.0
+offset_right = 415.0
+offset_bottom = 140.0
+mouse_filter = 1
+mouse_default_cursor_shape = 13
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("1_bebt8")
+script = ExtResource("2_5c2vf")
+
+[node name="expBtn" type="Control" parent="BtnMove1"]
+anchors_preset = 0
+offset_left = -6.0
+offset_top = 31.0
+offset_right = 17.0
+offset_bottom = 55.0
+script = ExtResource("4_10gml")
+
+[node name="BtnExpU" type="TextureButton" parent="BtnMove1/expBtn"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -1.0
+offset_right = 17.0
+offset_bottom = 5.0
+tooltip_text = "expand UP"
+mouse_default_cursor_shape = 14
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("4_t6uev")
+script = ExtResource("5_vqag0")
+
+[node name="BtnExpD" type="TextureButton" parent="BtnMove1/expBtn"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 18.0
+offset_right = 17.0
+offset_bottom = 24.0
+tooltip_text = "expand DOWN"
+mouse_default_cursor_shape = 14
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("6_h6jbu")
+script = ExtResource("7_m3sex")
+
+[node name="BtnExpL" type="TextureButton" parent="BtnMove1/expBtn"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 7.0
+offset_bottom = 16.0
+tooltip_text = "expand LEFT"
+mouse_default_cursor_shape = 15
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("7_awbac")
+script = ExtResource("9_xn6o6")
+
+[node name="BtnExpR" type="TextureButton" parent="BtnMove1/expBtn"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 7.0
+offset_right = 24.0
+offset_bottom = 16.0
+tooltip_text = "expand RIGHT"
+mouse_default_cursor_shape = 15
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("8_l8yys")
+script = ExtResource("11_m82xa")
+
+[node name="BtnExpM" type="TextureButton" parent="BtnMove1/expBtn"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 16.0
+offset_bottom = 16.0
+tooltip_text = "reset expand and camera"
+mouse_default_cursor_shape = 2
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("9_xvjec")
+script = ExtResource("13_78y30")
+
+[node name="portContainer" type="SubViewportContainer" parent="BtnMove1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 32.0
+offset_right = 382.0
+offset_bottom = 550.0
+stretch = true
+script = ExtResource("1_v0is7")
+
+[node name="SbViewport" type="SubViewport" parent="BtnMove1/portContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(350, 550)
+render_target_update_mode = 4
+
+[node name="cam2D" type="Camera2D" parent="BtnMove1/portContainer/SbViewport"]
+anchor_mode = 0
+
+[node name="image" type="Sprite2D" parent="BtnMove1/portContainer/SbViewport"]
+texture = ExtResource("1_xcfvg")
+centered = false
+script = ExtResource("17_38que")
+
+[node name="draw" type="Sprite2D" parent="."]
+script = ExtResource("20_ojfd1")
+
+[connection signal="button_down" from="BtnMove1" to="BtnMove1" method="_on_button_down"]
+[connection signal="button_up" from="BtnMove1" to="BtnMove1" method="_on_button_up"]
+[connection signal="mouse_entered" from="BtnMove1" to="BtnMove1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BtnMove1" to="BtnMove1" method="_on_mouse_exited"]
+[connection signal="button_down" from="BtnMove1/expBtn/BtnExpU" to="BtnMove1/expBtn" method="_on_btn_exp_u_button_down"]
+[connection signal="button_up" from="BtnMove1/expBtn/BtnExpU" to="BtnMove1/expBtn" method="_on_btn_exp_u_button_up"]
+[connection signal="mouse_entered" from="BtnMove1/expBtn/BtnExpU" to="BtnMove1/expBtn/BtnExpU" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BtnMove1/expBtn/BtnExpU" to="BtnMove1/expBtn/BtnExpU" method="_on_mouse_exited"]
+[connection signal="button_down" from="BtnMove1/expBtn/BtnExpD" to="BtnMove1/expBtn" method="_on_btn_exp_d_button_down"]
+[connection signal="button_up" from="BtnMove1/expBtn/BtnExpD" to="BtnMove1/expBtn" method="_on_btn_exp_d_button_up"]
+[connection signal="mouse_entered" from="BtnMove1/expBtn/BtnExpD" to="BtnMove1/expBtn/BtnExpD" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BtnMove1/expBtn/BtnExpD" to="BtnMove1/expBtn/BtnExpD" method="_on_mouse_exited"]
+[connection signal="button_down" from="BtnMove1/expBtn/BtnExpL" to="BtnMove1/expBtn" method="_on_btn_exp_l_button_down"]
+[connection signal="button_up" from="BtnMove1/expBtn/BtnExpL" to="BtnMove1/expBtn" method="_on_btn_exp_l_button_up"]
+[connection signal="mouse_entered" from="BtnMove1/expBtn/BtnExpL" to="BtnMove1/expBtn/BtnExpL" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BtnMove1/expBtn/BtnExpL" to="BtnMove1/expBtn/BtnExpL" method="_on_mouse_exited"]
+[connection signal="button_down" from="BtnMove1/expBtn/BtnExpR" to="BtnMove1/expBtn" method="_on_btn_exp_r_button_down"]
+[connection signal="button_up" from="BtnMove1/expBtn/BtnExpR" to="BtnMove1/expBtn" method="_on_btn_exp_r_button_up"]
+[connection signal="mouse_entered" from="BtnMove1/expBtn/BtnExpR" to="BtnMove1/expBtn/BtnExpR" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BtnMove1/expBtn/BtnExpR" to="BtnMove1/expBtn/BtnExpR" method="_on_mouse_exited"]
+[connection signal="button_down" from="BtnMove1/expBtn/BtnExpM" to="BtnMove1/expBtn" method="_on_btn_exp_m_button_down"]
+[connection signal="button_up" from="BtnMove1/expBtn/BtnExpM" to="BtnMove1/expBtn" method="_on_btn_exp_m_button_up"]
+[connection signal="mouse_entered" from="BtnMove1/expBtn/BtnExpM" to="BtnMove1/expBtn/BtnExpM" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BtnMove1/expBtn/BtnExpM" to="BtnMove1/expBtn/BtnExpM" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="BtnMove1/portContainer" to="BtnMove1/portContainer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BtnMove1/portContainer" to="BtnMove1/portContainer" method="_on_mouse_exited"]
