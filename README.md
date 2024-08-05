@@ -17,4 +17,4 @@ Download zip file / unpack / open the project with godot 4
 - and a lot of vars are doing the same thing ( its just for testing )
 - Once all minimum features are working cleaning, and making the code pretier is easy
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lDHYTOc1ku4?si=KAnPMiJMTD9m3IeK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)]([https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE](https://www.youtube.com/watch?v=lDHYTOc1ku4))
