@@ -17,4 +17,8 @@ Download zip file / unpack / open the project with godot 4
 - and a lot of vars are doing the same thing ( its just for testing )
 - Once all minimum features are working cleaning, and making the code pretier is easy
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)]([https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE](https://www.youtube.com/watch?v=lDHYTOc1ku4))
+
+https://youtu.be/lDHYTOc1ku4?si=NRWPcTFVFbir7m_T
+
+[tileDrawTest3_3.webm](https://github.com/user-attachments/assets/0d0cecef-e010-4633-a312-c62a6ddb7041)
+
