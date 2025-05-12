@@ -1,5 +1,5 @@
 Godot Version 4.2.1
-! Only tesed on Godot Version 4.2.1 !
+tested on Godot Version 4.2.1
 
 ---//--- tileDraw plugIn test3 ---//---
 instalation:
@@ -22,3 +22,7 @@ https://youtu.be/lDHYTOc1ku4?si=NRWPcTFVFbir7m_T
 
 [tileDrawTest3_3.webm](https://github.com/user-attachments/assets/0d0cecef-e010-4633-a312-c62a6ddb7041)
 
+UPDATE !!!
+https://youtu.be/kgiRmHoHIX4?si=E7pNlEnmvXiS3K09
+
+..
